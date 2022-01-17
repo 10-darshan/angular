@@ -1,0 +1,12 @@
+fieldset {
+    background-color: lightblue;
+    width: 60%;
+    height: fit-content;
+    margin: auto;
+  }
+  
+  legend {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+  }

@@ -1,0 +1,38 @@
+<div>
+    <br><br>
+    <fieldset>
+        <legend> Search Employee </legend><br>
+     <input type="number" name="e_id" [(ngModel)]="e_id"  placeholder="Enter Employee Id" />
+     <button type="button" (click)="findEmployee()">Search</button>
+    </fieldset>
+</div><br>
+<div class="div">
+    <table class="table">
+        <tr>
+            <th> Id </th>
+            <th> Name </th>
+            <th> Email </th>
+            <th> Location </th>
+            <th> Action </th>
+        </tr>
+        <tr *ngIf="empl; else elseBlock">
+            <td>{{empl.e_id}}</td>
+            <td>{{empl.e_name}}</td>
+            <td>{{empl.e_email}}</td>
+            <td>{{empl.e_location}}</td>
+            <td><button class="delete" (click)="deleteEmployee(empl.e_id)">Delete</button>&nbsp;
+                <button class="update"><a routerLink="/update/{{empl.e_id}}">Update</a></button>
+        </tr> 
+        <ng-template  #elseBlock>
+        <tr *ngFor="let employee of employee ">
+            <td>{{employee.e_id}}</td>
+            <td>{{employee.e_name}}</td>
+            <td>{{employee.e_email}}</td>
+            <td>{{employee.e_location}}</td>
+            <td><button class="delete" (click)="deleteEmployee(employee.e_id)">Delete</button>&nbsp;
+                <button class="update"><a routerLink="/update/{{employee.e_id}}">Update</a></button></td>
+        </tr>  
+        </ng-template>    
+    </table>
+    
+</div>

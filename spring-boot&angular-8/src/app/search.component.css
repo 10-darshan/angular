@@ -1,0 +1,68 @@
+fieldset {
+    background-color: lightblue;
+    width: 50%;
+    margin: auto;
+  }
+  
+  legend {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+  }
+  .table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin: auto;
+
+  }
+  
+  .table td, .table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .table tr:nth-child(even){background-color: #f2f2f2;}
+  
+  .table tr:hover {background-color: #ddd;}
+  
+  .table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+  }
+  a{
+    text-decoration:none;
+}
+a.myStyle{
+  color:white;
+  font-weight: bold;
+}
+.delete{
+  background-color: red;
+  border: none;
+  color: white;
+  border-radius: 12px;
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.update{
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  border-radius: 12px;
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.delete:hover {
+  background-color: #f44336;
+  color: white;
+}
+.update:hover {
+  background-color: #008CBA;
+  color: white;
+}

@@ -1,0 +1,13 @@
+.button {
+  color:  white;
+  background-color: lightblue;
+  font-weight: bold;
+  border : none;
+  font-size: x-large;
+}
+.p{
+  color: lightblue;
+  text-align: center;
+  font-weight: bold;
+  font-size: xx-large;
+}

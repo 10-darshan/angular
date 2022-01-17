@@ -1,0 +1,4 @@
+<p>Angular Assignment 4</p>
+<div [@div1] *ngIf="isShown" (@div3.done)="onAnimationEvent($event)">This is First Element A</div>
+<div [@div2] *ngIf="isShown" (@div3.done)="onAnimationEvent($event)">This is Second Element B</div>
+<div [@div3] *ngIf="isShown" (@div3.done)="onAnimationEvent($event)">This is Third Element C</div>

@@ -1,0 +1,17 @@
+<div class="div">
+    <br><br>
+        <fieldset>
+            <legend> Enter  Updated Employee Details </legend>
+            <h2>{{message}}</h2>
+            <form>
+                <pre>
+        <label for="2">    Name : <input type="text" id="2" name="e_name" [(ngModel)]="employee.e_name" required="required" placeholder="Enter Employee Name"></label><br>
+        <label for="3">   Email : <input type="email" id="3" name="e_email" [(ngModel)]="employee.e_email" required="required" placeholder="Enter Employee Email Id"></label><br>
+        <label for="4">Location : <input type="text" id="4" name="e_location" [(ngModel)]="employee.e_location" required="required" placeholder="Enter Employee Location"></label><br>
+                    <input type="submit" value="Update" (click)="updateEmployee()">  <input type="button" value="Back" (click)="goBack()">
+                    
+                </pre>
+            </form>
+        </fieldset>
+    
+</div>

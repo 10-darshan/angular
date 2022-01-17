@@ -1,0 +1,127 @@
+
+<div class="container">
+    <form class="form-group">
+        <h4 style="color:rgb(241, 28, 28);text-align: left;">SETTLEMENT PAYMENT DETAILS
+            <button class="button" (click)="searchTransaction()" style="float: right;">SUBMIT</button></h4>
+        <div style="clear: both;"></div>
+        <hr>
+        <div class="row">
+            <div class="column" style="background-color:white;">
+
+                <div class="name-item ">
+                    <label for="1">Settlement Currency </label><select id="1" name="settlementCurrency"
+                        [(ngModel)]="settlementCurrency">
+                        <option *ngFor="let currency of currency" [value]="currency">{{currency}}</option>
+                    </select>
+                </div><br>
+                <div class="name-item ">
+                    <label for="3">Settlement Amount From</label><input type="number" id="3"
+                        name="settlementAmountFrom" [(ngModel)]="settlementAmountFrom">
+                </div><br>
+                <div class="name-item ">
+                    <label for="5">Settlement From Date</label><input type="date" id="5" name="settlementFromDate"
+                        [(ngModel)]="settlementFromDate">
+                </div><br>
+            </div>
+            <div class="column" style="background-color:white;">
+                <div class="name-item ">
+                    <label for="2">Settlement Amount </label><input type="number" id="2" name="settlementAmount"
+                        [(ngModel)]="settlementAmount"><br>
+                </div><br>
+                <div class="name-item ">
+                    <label for="4">Settlement Amount To</label><input type="number" id="4" name="settlementAmountTo"
+                        [(ngModel)]="settlementAmountTo">
+                </div><br>
+                <div class="name-item ">
+                    <label for="6">Settlement To Date </label><input type="date" id="6" name="settlementToDate"
+                        [(ngModel)]="settlementToDate">
+                </div><br>
+            </div>
+        </div>
+
+        <h4 style="color:rgb(241, 28, 28);text-align: left;">PAYMENT DETAILS(PAYOUT DETAILS) :</h4>
+        <hr>
+        <div class="row">
+            <div class="column" style="background-color:white;">
+                <div class="name-item ">
+                    <label for="7">Instructed Currency</label><select id="7" name="instructedCurrency"
+                        [(ngModel)]="instructedCurrency">
+                        <option *ngFor="let currency of currency" [value]="currency">{{currency}}</option>
+                    </select>
+                </div><br>
+                <div class="name-item ">
+                    <label for="9">Instructed Amount From</label><input type="number" id="9"
+                        name="instructedAmountFrom">
+                </div><br>
+                <div class="name-item ">
+                    <label for="11">Instructed From Date</label><input type="date" id="11"
+                        name="instructedFromDate">
+                </div><br>
+                <div class="name-item ">
+                    <label for="13">Debit Party Account</label><input type="number" id="13"
+                        name="debitPartyAccount">
+                </div><br>
+                <div class="name-item ">
+                    <label for="15">Debit Party CID</label><input type="text" id="15" name="debitPartyCID">
+                </div><br>
+                <div class="name-item ">
+                    <label for="17">Sending BIC</label><input type="text" id="17" name="sendingBIC">
+                </div><br>
+                <div class="name-item ">
+                    <label for="19">Sender's Reference</label><input type="text" id="19" name="sender'sReference">
+                </div><br>
+                <div class="name-item ">
+                    <label for="21">Message Type</label><input type="text" id="21" name="messageType">
+                </div><br>
+            </div>
+            <div class="column" style="background-color:white;">
+                <div class="name-item ">
+                    <label for="8">FX Payments Only </label><input type="checkbox" id="8"
+                        name=">fxPaymentsOnly"><br>
+                </div><br>
+                <div class="name-item ">
+                    <label for="10">Instructed Amount To</label><input type="number" id="10"
+                        name="instructedAmountTo"><br>
+                </div><br>
+                <div class="name-item ">
+                    <label for="12">Instructed To Date</label><input type="date" id="12"
+                        name="instructedToDate"><br>
+                </div><br>
+                <div class="name-item ">
+                    <label for="14">Credit Party Account</label><input type="number" id="14"
+                        name="creditPartyAccount"><br>
+                </div><br>
+                <div class="name-item ">
+                    <label for="16">Credit Party CID</label><input type="text" id="16" name="creditPartyCID"><br>
+                </div><br>
+                <div class="name-item ">
+                    <label for="18">Receiving BIC</label><input type="text" id="18" name="receivingBIC"><br>
+                </div><br>
+                <div class="name-item ">
+                    <label for="20">EPH Reference</label><input type="text" id="20" name="ephReference"><br>
+                </div><br>
+                <div class="name-item ">
+                    <label for="22">Status</label><input type="text" id="22" name="Status"><br>
+                </div><br>
+            </div>
+        </div>
+
+    </form>
+</div>
+<br><br>
+<div *ngIf="rowData">
+    <button mat-raised-button (click)="onCreate()">
+        <mat-icon>add</mat-icon>Create
+      </button>
+<ag-grid-angular 
+    style="width: 1002px; height: 500px; margin: auto;" 
+    class="ag-theme-balham"
+    [gridOptions]="gridOptions"
+    [rowData]="rowData" 
+    [columnDefs]="columnDefs"
+    rowSelection="single"
+    (gridReady)="onGridReady($event)">
+</ag-grid-angular>
+</div>
+
+
